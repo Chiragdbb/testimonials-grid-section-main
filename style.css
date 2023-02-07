@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Neutral */
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+#wrapper {
+    min-height: 100vh;
+    background-color: var(--Light-grayish-blue);
+}
+
+.container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-template-rows: repeat(2, 285px);
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.card-1,
+.card-2,
+.card-5 {
+    color: var(--White);
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: fit-content;
+    display: inline-block;
+    border-radius: 15rem;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 30px;
+    object-fit: cover;
+}
+
+.name{
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.user-verification {
+    opacity: 0.5;
+    font-size: 0.8125rem;
+}
+
+.bold-text {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+.normal-text {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+
+.card-1 {
+    grid-column: span 2;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: right 15% top;
+    background-color: var(--Moderate-violet);
+}
+
+.card-1 .profile-img {
+    border: 3px solid hsl(264, 83%, 70%);
+}
+
+.card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-2 .profile-img{
+    border: 3px solid ;
+}
+
+.card-3 {
+    grid-row: span 2;
+    box-shadow: 3px 3px 5px var(--Light-gray);
+}
+
+.card-4{
+    box-shadow: 0px 4px 5px var(--Light-gray);
+}
+
+.card-3, .card-4{
+    background-color: var(--White); 
+}
+
+.card-3,.card-4 .bold-text{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card-5 {
+    grid-column: span 2;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.card-5 .profile-img {
+    border: 3px solid hsl(264, 83%, 70%);
+}
+
+/* media query */
+
+@media only screen and (max-width: 680px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .card-3{
+        order: 1;
+    }
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
